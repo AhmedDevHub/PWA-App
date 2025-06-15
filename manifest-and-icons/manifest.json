@@ -1,0 +1,16 @@
+{
+  "name": "PWA App",
+  "short_name": "PWA App",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5a0fc8",
+  "icons": [
+    {
+      "src": "./pwa-logo-black-purple-modern-design-transparent-background-1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
