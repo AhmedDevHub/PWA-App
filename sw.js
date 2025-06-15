@@ -1,22 +1,18 @@
 const cacheDB = "PWA-App";
 const filesToCache = [
-  "/",
   "/index.html",
   "/pages/page1.html",
   "/pages/page2.html",
+  "/pages/404.html",
+  "/pages/offline.html",
   "/CSS/style.css",
   "/CSS/page1.css",
   "/CSS/page2.css",
+  "/CSS/404.css",
   "/CSS/offline.css",
   "/JS/main.js",
-  "/JS/page1.js",
-  "/JS/page2.js",
-  "/offline.html",
-  "/404.html",
-  "/CSS/404.css",
-  "/anger-512x512.png",
-  "/manifest-and-icons/manifest.json",
-  "/manifest-and-icons/anger-512x512.png",
+  "/assets/manifest.json",
+  "/assets/anger-512x512.png",
 ];
 
 // 1. Install

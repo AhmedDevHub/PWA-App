@@ -1,9 +1,12 @@
+navigator.serviceWorker.register("/sw.js");
+
+// ...................
 if ("serviceWorker" in navigator) {
   console.log("Service Workers are supported in this browser.");
 
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("sw.js")
+      .register("/sw.js")
       .then((reg) => {
         console.log("ServiceWorker registration successful with scope: ", reg);
       })

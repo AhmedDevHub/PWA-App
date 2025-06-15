@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#5a0fc8">
     <title>Page 2 - My PWA App</title>
-    <link rel="apple-touch-icon" href="../manifest-and-icons/anger-512x512.png">
-    <link rel="manifest" href="/manifest-and-icons/manifest.json">
+    <link rel="apple-touch-icon" href="../assets/anger-512x512.png">
+    <link rel="manifest" href="../assets/manifest.json">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/page2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/anger-512x512.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -25,11 +27,7 @@
                 <li><a href="./page2.html" aria-current="page">Page 2</a></li>
             </ul>
             <button type="button" id="install-btn" class="back-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
+                <i class="bi bi-download"></i>
                 Install App
             </button>
         </nav>
@@ -47,19 +45,11 @@
             </p>
             <div class="button-group">
                 <a href="/index.html" class="back-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7" />
-                    </svg>
+                    <i class="bi bi-house-fill"></i>
                     Back to Home
                 </a>
                 <button type="button" class="share-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="18" cy="5" r="3"></circle>
-                        <circle cx="6" cy="12" r="3"></circle>
-                        <circle cx="18" cy="19" r="3"></circle>
-                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                    </svg>
+                    <i class="bi bi-share"></i>
                     Share
                 </button>
             </div>
@@ -69,9 +59,9 @@
     <footer>
         <p>&copy; 2025 My PWA App <span>By Ahmed Ashraf</span>. All rights reserved.</p>
     </footer>
+    <script>
+        navigator.serviceWorker.register("/sw.js");
+    </script>
+    <script src="../JS/main.js"></script></body>
 
-    <script src="../JS/main.js"></script>
-    <script src="../JS/page2.js"></script>
-</body>
-
-</html>
+</html> 

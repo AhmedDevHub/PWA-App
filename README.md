@@ -18,7 +18,7 @@ PWA-App/
 ├── CSS/              # Stylesheets
 ├── JS/              # JavaScript files
 ├── pages/           # Additional pages
-├── manifest-and-icons/  # PWA manifest and icons
+├── assets/  # PWA manifest and icons
 ├── index.html       # Main entry point
 ├── offline.html     # Offline fallback page
 ├── sw.js           # Service Worker
