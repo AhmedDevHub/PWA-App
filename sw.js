@@ -1,22 +1,22 @@
-const cacheDB = "PWA-App-v3";
-const urlsToCache = [
+const cacheDB = "PWA-App";
+const filesToCache = [
   "/",
   "/index.html",
-  "/pages/page-1.html",
-  "/pages/page-2.html",
+  "/pages/page1.html",
+  "/pages/page2.html",
   "/CSS/style.css",
-  "/CSS/page-1.css",
-  "/CSS/page-2.css",
+  "/CSS/page1.css",
+  "/CSS/page2.css",
   "/CSS/offline.css",
   "/JS/main.js",
-  "/JS/page-1.js",
-  "/JS/page-2.js",
+  "/JS/page1.js",
+  "/JS/page2.js",
   "/offline.html",
-  "/wrongUrl.html",
-  "/CSS/wrongUrl.css",
-  "/pwa-logo-black-purple-modern-design-transparent-background-1.png",
+  "/404.html",
+  "/CSS/404.css",
+  "/anger-512x512.png",
   "/manifest-and-icons/manifest.json",
-  "/manifest-and-icons/icon512_maskable.png",
+  "/manifest-and-icons/anger-512x512.png",
 ];
 
 // 1. Install
@@ -25,7 +25,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheDB).then((cache) => {
       console.log("Caching essential files...");
-      return cache.addAll(urlsToCache);
+      return cache.addAll(filesToCache);
     })
   );
   self.skipWaiting();
@@ -53,7 +53,7 @@ self.addEventListener("fetch", (event) => {
       // online
       .then((response) => {
         if (!response || response.status === 404) {
-          return caches.match("/wrongUrl.html");
+          return caches.match("/404.html");
         }
         return response;
       })
@@ -68,7 +68,7 @@ self.addEventListener("fetch", (event) => {
             return caches.match("/offline.html");
           }
 
-          return caches.match("/wrongUrl.html");
+          return caches.match("/404.html");
         });
       })
   );
