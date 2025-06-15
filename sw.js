@@ -1,14 +1,22 @@
-const cacheDB = "PWA-App";
-const filesToCache = [
+const cacheDB = "PWA-App-v3";
+const urlsToCache = [
+  "/",
   "/index.html",
+  "/pages/page-1.html",
+  "/pages/page-2.html",
   "/CSS/style.css",
-  "/JS/main.js",
-  "/page-1.html",
   "/CSS/page-1.css",
-  "/offline.html",
+  "/CSS/page-2.css",
   "/CSS/offline.css",
+  "/JS/main.js",
+  "/JS/page-1.js",
+  "/JS/page-2.js",
+  "/offline.html",
   "/wrongUrl.html",
   "/CSS/wrongUrl.css",
+  "/pwa-logo-black-purple-modern-design-transparent-background-1.png",
+  "/manifest-and-icons/manifest.json",
+  "/manifest-and-icons/icon512_maskable.png",
 ];
 
 // 1. Install
@@ -17,7 +25,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheDB).then((cache) => {
       console.log("Caching essential files...");
-      return cache.addAll(filesToCache);
+      return cache.addAll(urlsToCache);
     })
   );
   self.skipWaiting();
